@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -546,43 +546,28 @@ function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (PostImage);
 
 /***/ }),
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(14);
+module.exports = __webpack_require__(9);
 
 
 /***/ }),
-/* 14 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-
-// EXTERNAL MODULE: external "react"
-var external__react_ = __webpack_require__(0);
-var external__react__default = /*#__PURE__*/__webpack_require__.n(external__react_);
-
-// EXTERNAL MODULE: ./components/layout.js + 3 modules
-var layout = __webpack_require__(4);
-
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__(2);
-var router__default = /*#__PURE__*/__webpack_require__.n(router_);
-
-// EXTERNAL MODULE: external "axios"
-var external__axios_ = __webpack_require__(3);
-var external__axios__default = /*#__PURE__*/__webpack_require__.n(external__axios_);
-
-// EXTERNAL MODULE: ./components/post-image.js
-var post_image = __webpack_require__(7);
-
-// CONCATENATED MODULE: ./components/cat-label.js
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_layout__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_router__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_router__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_next_link__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_post_image__ = __webpack_require__(7);
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -601,187 +586,41 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var cat_label_CatLabel =
+
+
+
+
+var Blog =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(CatLabel, _React$Component);
+  _inherits(Blog, _React$Component);
 
-  function CatLabel(props) {
+  function Blog(props) {
     var _this;
 
-    _classCallCheck(this, CatLabel);
+    _classCallCheck(this, Blog);
 
-    _this = _possibleConstructorReturn(this, (CatLabel.__proto__ || Object.getPrototypeOf(CatLabel)).call(this, props));
+    _this = _possibleConstructorReturn(this, (Blog.__proto__ || Object.getPrototypeOf(Blog)).call(this, props));
     _this.state = {
-      cat: []
+      posts: []
     };
     return _this;
   }
 
-  _createClass(CatLabel, [{
+  _createClass(Blog, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
 
-      if (this.props.catId) {
-        var url = 'https://blog.matrixki.com/wp-json/wp/v2/categories/' + this.props.catId;
-        external__axios__default.a.get(url).then(function (res) {
-          return res.data;
-        }).then(function (cat) {
-          console.log(cat);
-
-          _this2.setState(function (state, props) {
-            return {
-              cat: cat
-            };
-          });
-        });
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return external__react__default.a.createElement("span", {
-        className: "cat-label"
-      }, this.state.cat.name);
-    }
-  }]);
-
-  return CatLabel;
-}(external__react__default.a.Component);
-
-;
-/* harmony default export */ var cat_label = (cat_label_CatLabel);
-// CONCATENATED MODULE: ./components/tag-label.js
-
-
-function tag_label__typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { tag_label__typeof = function _typeof(obj) { return typeof obj; }; } else { tag_label__typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return tag_label__typeof(obj); }
-
-function tag_label__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function tag_label__defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function tag_label__createClass(Constructor, protoProps, staticProps) { if (protoProps) tag_label__defineProperties(Constructor.prototype, protoProps); if (staticProps) tag_label__defineProperties(Constructor, staticProps); return Constructor; }
-
-function tag_label__possibleConstructorReturn(self, call) { if (call && (tag_label__typeof(call) === "object" || typeof call === "function")) { return call; } return tag_label__assertThisInitialized(self); }
-
-function tag_label__assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function tag_label__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var tag_label_tagLabel =
-/*#__PURE__*/
-function (_React$Component) {
-  tag_label__inherits(tagLabel, _React$Component);
-
-  function tagLabel(props) {
-    var _this;
-
-    tag_label__classCallCheck(this, tagLabel);
-
-    _this = tag_label__possibleConstructorReturn(this, (tagLabel.__proto__ || Object.getPrototypeOf(tagLabel)).call(this, props));
-    _this.state = {
-      tag: []
-    };
-    return _this;
-  }
-
-  tag_label__createClass(tagLabel, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      if (this.props.tagId) {
-        var url = 'https://blog.matrixki.com/wp-json/wp/v2/tags/' + this.props.tagId;
-        external__axios__default.a.get(url).then(function (res) {
-          return res.data;
-        }).then(function (tag) {
-          console.log(tag);
-
-          _this2.setState(function (state, props) {
-            return {
-              tag: tag
-            };
-          });
-        });
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return external__react__default.a.createElement("span", {
-        className: "tag-label"
-      }, this.state.tag.name);
-    }
-  }]);
-
-  return tagLabel;
-}(external__react__default.a.Component);
-
-;
-/* harmony default export */ var tag_label = (tag_label_tagLabel);
-// EXTERNAL MODULE: external "next/link"
-var link_ = __webpack_require__(1);
-var link__default = /*#__PURE__*/__webpack_require__.n(link_);
-
-// CONCATENATED MODULE: ./pages/post.js
-
-
-function post__typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { post__typeof = function _typeof(obj) { return typeof obj; }; } else { post__typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return post__typeof(obj); }
-
-function post__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function post__defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function post__createClass(Constructor, protoProps, staticProps) { if (protoProps) post__defineProperties(Constructor.prototype, protoProps); if (staticProps) post__defineProperties(Constructor, staticProps); return Constructor; }
-
-function post__possibleConstructorReturn(self, call) { if (call && (post__typeof(call) === "object" || typeof call === "function")) { return call; } return post__assertThisInitialized(self); }
-
-function post__assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function post__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-
-
-var post_Post =
-/*#__PURE__*/
-function (_React$Component) {
-  post__inherits(Post, _React$Component);
-
-  function Post(props) {
-    var _this;
-
-    post__classCallCheck(this, Post);
-
-    _this = post__possibleConstructorReturn(this, (Post.__proto__ || Object.getPrototypeOf(Post)).call(this, props));
-    _this.state = {
-      post: false
-    };
-    return _this;
-  }
-
-  post__createClass(Post, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      // get post data
-      var url = 'https://blog.matrixki.com/wp-json/wp/v2/posts/' + this.props.router.query.postId;
-      external__axios__default.a.get(url).then(function (res) {
+      __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get('https://blog.matrixki.com/wp-json/wp/v2/posts?per_page=9').then(function (res) {
         return res.data;
-      }).then(function (post) {
-        console.log(post);
+      }).then(function (posts) {
+        console.log(posts);
 
-        _this2.setState({
-          post: post
+        _this2.setState(function (state, props) {
+          return {
+            posts: posts
+          };
         });
 
         document.body.classList.remove('header-transparent');
@@ -792,74 +631,64 @@ function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      return external__react__default.a.createElement(layout["a" /* default */], null, this.state.post && external__react__default.a.createElement("div", {
-        className: "post-page"
-      }, external__react__default.a.createElement("div", {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_layout__["a" /* default */], null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "blog-page"
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "container"
-      }, external__react__default.a.createElement("div", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "row"
-      }, external__react__default.a.createElement("div", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "col-12"
-      }, external__react__default.a.createElement("nav", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
         "aria-label": "breadcrumb"
-      }, external__react__default.a.createElement("ol", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ol", {
         className: "breadcrumb"
-      }, external__react__default.a.createElement("li", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
         className: "breadcrumb-item"
-      }, external__react__default.a.createElement(link__default.a, {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_next_link___default.a, {
         href: "/"
-      }, external__react__default.a.createElement("a", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         onClick: function onClick() {
           _this3.props.router.push('/');
         }
-      }, "Home"))), external__react__default.a.createElement("li", {
-        className: "breadcrumb-item"
-      }, external__react__default.a.createElement(link__default.a, {
-        href: "/blog"
-      }, external__react__default.a.createElement("a", {
-        onClick: function onClick() {
-          _this3.props.router.push('/blog');
-        }
-      }, "Blog"))), external__react__default.a.createElement("li", {
+      }, "Home"))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
         className: "breadcrumb-item active",
         "aria-current": "page"
-      }, this.state.post.title.rendered)))), external__react__default.a.createElement("div", {
-        className: "col col-md-10 offset-md-1"
-      }, external__react__default.a.createElement("article", {
-        className: "post-article"
-      }, this.state.post.categories.length > 0 && this.state.post.categories.map(function (cat) {
-        return external__react__default.a.createElement(cat_label, {
-          catId: cat,
-          key: cat
-        });
-      }), external__react__default.a.createElement("h1", {
-        className: "post-title"
-      }, this.state.post.title.rendered), external__react__default.a.createElement("h2", {
-        className: "post-excerpt",
-        dangerouslySetInnerHTML: {
-          __html: this.state.post.excerpt.rendered
-        }
-      }), external__react__default.a.createElement(post_image["a" /* default */], {
-        media: this.state.post.featured_media ? this.state.post.featured_media : false
-      }), external__react__default.a.createElement("div", {
-        className: "post-content",
-        dangerouslySetInnerHTML: {
-          __html: this.state.post.content.rendered
-        }
-      }), this.state.post.tags.length > 0 && this.state.post.tags.map(function (tag) {
-        return external__react__default.a.createElement(tag_label, {
-          tagId: tag,
-          key: tag
-        });
-      })))))));
+      }, "Blog")))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "col-12"
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+        className: "section-title"
+      }, "Mike's Blog")), this.state.posts.length > 0 && this.state.posts.map(function (post) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+          className: "col-md-4 col-sm-6",
+          key: post.id
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+          className: "post-block"
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_next_link___default.a, {
+          href: "/post?postId=".concat(post.id)
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+          onClick: function onClick() {
+            _this3.props.router.push("/post?postId=".concat(post.id));
+          }
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_post_image__["a" /* default */], {
+          media: post.featured_media ? post.featured_media : false
+        }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+          className: "post-title"
+        }, post.title.rendered), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+          className: "excerpt",
+          dangerouslySetInnerHTML: {
+            __html: post.excerpt.rendered
+          }
+        })))));
+      })))));
     }
   }]);
 
-  return Post;
-}(external__react__default.a.Component);
+  return Blog;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 ;
-/* harmony default export */ var post = __webpack_exports__["default"] = (Object(router_["withRouter"])(post_Post));
+/* harmony default export */ __webpack_exports__["default"] = (Blog);
 
 /***/ })
 /******/ ]);
