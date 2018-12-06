@@ -32,7 +32,7 @@ class Layout extends React.Component {
                     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
                     {/* custom main CSS */}
                     <link rel="stylesheet" href="/_next/static/style.css" />
-                    { window.location.pathname !== '/' && 
+                    { window.location.pathname === '/' && 
                     <meta property="og:image" content="/static/img/mike_avatar.jpg" />
                     }
                 </Head>
