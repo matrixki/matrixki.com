@@ -58,6 +58,11 @@
             text-decoration: underline;
             color: $black;
         }
+        pre{
+            background: #272822;
+            color: #f8f8f2;
+            padding: 8px;
+        }
     }
 }
 
